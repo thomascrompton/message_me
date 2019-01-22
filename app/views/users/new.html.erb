@@ -1,0 +1,23 @@
+<h2 align="center">Sign up for MessageMe - a complete Chat App</h2>
+
+<div class="ui placeholder segment">
+    <div class="column">
+      <%= form_for(@user, :html => {class: 'ui form', role: 'form'}) do |f| %>
+        <div class="field">
+          <label>New Username</label>
+          <div class="ui left icon input">
+            <%= f.text_field :username, class: 'form-control', placeholder: "Username", autofocus: true %>
+            <i class="user icon"></i>
+          </div>
+        </div>
+        <div class="field">
+          <label>Password</label>
+          <div class="ui left icon input">
+            <%= f.password_field :password, class: 'form-control', autocomplete: "off" %>
+            <i class="lock icon"></i>
+          </div>
+        </div>
+        <%= f.submit "Sign up", class: "ui blue submit button" %>
+      <% end %>    
+    </div>
+</div>
